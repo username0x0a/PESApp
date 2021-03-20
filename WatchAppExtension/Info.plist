@@ -34,5 +34,10 @@
 	</dict>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>CircularPro-Medium.otf</string>
+		<string>CircularPro-Bold.otf</string>
+	</array>
 </dict>
 </plist>

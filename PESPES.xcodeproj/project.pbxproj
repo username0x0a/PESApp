@@ -21,6 +21,15 @@
 		D6C7641A2606308C009B987C /* PESManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C764182606308C009B987C /* PESManager.swift */; };
 		D6C764502606610B009B987C /* PESHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7644F2606610B009B987C /* PESHelpers.swift */; };
 		D6C764512606610B009B987C /* PESHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7644F2606610B009B987C /* PESHelpers.swift */; };
+		D6D1A753260680C600059979 /* CircularPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6D1A750260680C600059979 /* CircularPro-Bold.otf */; };
+		D6D1A754260680C600059979 /* CircularPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6D1A750260680C600059979 /* CircularPro-Bold.otf */; };
+		D6D1A755260680C600059979 /* CircularPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6D1A750260680C600059979 /* CircularPro-Bold.otf */; };
+		D6D1A756260680C600059979 /* CircularPro-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6D1A751260680C600059979 /* CircularPro-Book.otf */; };
+		D6D1A757260680C600059979 /* CircularPro-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6D1A751260680C600059979 /* CircularPro-Book.otf */; };
+		D6D1A758260680C600059979 /* CircularPro-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6D1A751260680C600059979 /* CircularPro-Book.otf */; };
+		D6D1A759260680C600059979 /* CircularPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6D1A752260680C600059979 /* CircularPro-Medium.otf */; };
+		D6D1A75A260680C600059979 /* CircularPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6D1A752260680C600059979 /* CircularPro-Medium.otf */; };
+		D6D1A75B260680C600059979 /* CircularPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6D1A752260680C600059979 /* CircularPro-Medium.otf */; };
 		D6DA549925633E6800CE5706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA549825633E6800CE5706 /* AppDelegate.swift */; };
 		D6DA549B25633E6800CE5706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA549A25633E6800CE5706 /* SceneDelegate.swift */; };
 		D6DA549D25633E6800CE5706 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA549C25633E6800CE5706 /* ViewController.swift */; };
@@ -96,6 +105,9 @@
 		D6C7641426062EB5009B987C /* PESElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PESElements.swift; sourceTree = "<group>"; };
 		D6C764182606308C009B987C /* PESManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PESManager.swift; sourceTree = "<group>"; };
 		D6C7644F2606610B009B987C /* PESHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PESHelpers.swift; sourceTree = "<group>"; };
+		D6D1A750260680C600059979 /* CircularPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularPro-Bold.otf"; sourceTree = "<group>"; };
+		D6D1A751260680C600059979 /* CircularPro-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularPro-Book.otf"; sourceTree = "<group>"; };
+		D6D1A752260680C600059979 /* CircularPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularPro-Medium.otf"; sourceTree = "<group>"; };
 		D6DA549525633E6800CE5706 /* PESPES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PESPES.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6DA549825633E6800CE5706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6DA549A25633E6800CE5706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +163,9 @@
 		D601BEB625649234002476B0 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				D6D1A750260680C600059979 /* CircularPro-Bold.otf */,
+				D6D1A751260680C600059979 /* CircularPro-Book.otf */,
+				D6D1A752260680C600059979 /* CircularPro-Medium.otf */,
 				D601BEB72564924A002476B0 /* Playground.playground */,
 				D6C7641426062EB5009B987C /* PESElements.swift */,
 				D6C764182606308C009B987C /* PESManager.swift */,
@@ -307,6 +322,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D601BE50256482CB002476B0 /* Assets.xcassets in Resources */,
+				D6D1A757260680C600059979 /* CircularPro-Book.otf in Resources */,
+				D6D1A75A260680C600059979 /* CircularPro-Medium.otf in Resources */,
+				D6D1A754260680C600059979 /* CircularPro-Bold.otf in Resources */,
 				D601BE4E256482CB002476B0 /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +334,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D601BE64256482CC002476B0 /* Assets.xcassets in Resources */,
+				D6D1A75B260680C600059979 /* CircularPro-Medium.otf in Resources */,
+				D6D1A758260680C600059979 /* CircularPro-Book.otf in Resources */,
+				D6D1A755260680C600059979 /* CircularPro-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +347,9 @@
 				D6DA54A525633E6900CE5706 /* LaunchScreen.storyboard in Resources */,
 				D6DA54A225633E6900CE5706 /* Assets.xcassets in Resources */,
 				D6DA54A025633E6800CE5706 /* Main.storyboard in Resources */,
+				D6D1A759260680C600059979 /* CircularPro-Medium.otf in Resources */,
+				D6D1A753260680C600059979 /* CircularPro-Bold.otf in Resources */,
+				D6D1A756260680C600059979 /* CircularPro-Book.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,8 @@ class InterfaceController: WKInterfaceController {
 	@IBOutlet var indexLabel: WKInterfaceLabel!
 
 	override func awake(withContext context: Any?) {
-		// Configure interface objects here.
+		nameLabel.setText(nil)
+		indexLabel.setText(nil)
 	}
 
 	var data: PESData? {
@@ -26,6 +27,8 @@ class InterfaceController: WKInterfaceController {
 	func refresh() {
 		guard let jmk = data?.data[.SouthMoravia] else {
 			nameLabel.setText("No data")
+			indexLabel.setText(nil)
+			contentGroup.setBackgroundColor(.darkGray)
 			return
 		}
 		nameLabel.setText(jmk.name)

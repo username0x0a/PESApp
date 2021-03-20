@@ -27,6 +27,14 @@ let PESRatingColor: [PESRating: UInt] = [
 	.no5: 0x6648FF,
 ]
 
+func PESRatingForIndex(_ index: Int) -> PESRating {
+	if index >= 75 { return .no5 }
+	if index >= 60 { return .no4 }
+	if index >= 40 { return .no3 }
+	if index >= 20 { return .no2 }
+	return .no1
+}
+
 #if canImport(UIKit)
 import UIKit
 #endif

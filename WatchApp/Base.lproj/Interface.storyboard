@@ -6,21 +6,51 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18092"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="18022"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="CircularPro-Bold.otf">
+            <string>CircularPro-Bold</string>
+        </array>
+        <array key="CircularPro-Medium.otf">
+            <string>CircularPro-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller spacing="0.0" fullBounds="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchApp" customModuleProvider="target">
+                <controller spacing="0.0" fullScreen="YES" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchApp" customModuleProvider="target">
                     <items>
-                        <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" radius="40" spacing="0.0" id="dhv-k3-Bot">
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" layout="overlap" radius="40" spacing="0.0" id="dhv-k3-Bot">
                             <items>
+                                <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="0.0" id="ox5-3j-vfT">
+                                    <items>
+                                        <group width="1" height="0.20000000000000001" alignment="left" layout="vertical" id="LM0-yl-amt">
+                                            <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </group>
+                                        <group width="1" height="0.20000000000000001" alignment="left" layout="vertical" id="qtQ-HS-ZNY">
+                                            <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </group>
+                                        <group width="1" height="0.20000000000000001" alignment="left" layout="vertical" id="CXY-QB-yRF">
+                                            <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </group>
+                                        <group width="1" height="0.20000000000000001" alignment="left" layout="vertical" id="ywT-oL-ycz">
+                                            <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </group>
+                                        <group width="1" height="0.20000000000000001" alignment="left" layout="vertical" id="jE9-v5-IeT">
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </group>
+                                    </items>
+                                </group>
                                 <group width="1" height="0.5" alignment="center" layout="vertical" spacing="0.0" id="30c-sK-5DW">
                                     <items>
-                                        <group width="1" height="16" alignment="center" spacing="0.0" id="bKT-eu-GVq"/>
-                                        <group width="1" height="1" heightAdjustment="-16" alignment="center" spacing="0.0" id="tf3-OT-1OO">
+                                        <group width="1" height="32" alignment="center" spacing="0.0" id="bKT-eu-GVq"/>
+                                        <group width="1" height="1" heightAdjustment="-32" alignment="center" spacing="0.0" id="tf3-OT-1OO">
                                             <items>
                                                 <label alignment="right" text="Jihomoravský kraj" textAlignment="right" numberOfLines="3" minimumScaleFactor="0.5" id="o8k-dn-oLa">
-                                                    <fontDescription key="font" type="system" weight="semibold" pointSize="24"/>
+                                                    <fontDescription key="font" name="CircularPro-Medium" family="Circular Pro" pointSize="22"/>
+                                                    <variation key="device=watch38mm">
+                                                        <fontDescription key="font" name="CircularPro-Medium" family="Circular Pro" pointSize="18"/>
+                                                    </variation>
                                                 </label>
                                                 <group width="16" alignment="right" spacing="0.0" id="DpN-pr-qEn"/>
                                             </items>
@@ -30,8 +60,11 @@
                                 <group width="1" height="0.5" alignment="center" verticalAlignment="bottom" spacing="0.0" id="pAZ-2J-8Us">
                                     <items>
                                         <group width="16" height="1" alignment="left" verticalAlignment="bottom" spacing="0.0" id="RqM-3I-GtQ"/>
-                                        <label height="1" alignment="left" verticalAlignment="bottom" text="123" textAlignment="left" id="HT3-lp-WVN">
-                                            <fontDescription key="font" type="boldSystem" pointSize="80"/>
+                                        <label alignment="left" verticalAlignment="bottom" text="123" textAlignment="left" id="HT3-lp-WVN">
+                                            <fontDescription key="font" name="CircularPro-Bold" family="Circular Pro" pointSize="86"/>
+                                            <variation key="device=watch38mm">
+                                                <fontDescription key="font" name="CircularPro-Bold" family="Circular Pro" pointSize="74"/>
+                                            </variation>
                                         </label>
                                     </items>
                                 </group>

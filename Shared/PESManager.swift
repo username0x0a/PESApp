@@ -1,6 +1,6 @@
 //
 //  PESManager.swift
-//  PESPES
+//  PES
 //
 //  Created by Michal Zelinka on 20/03/2021.
 //
@@ -14,6 +14,11 @@ class PESManager {
 		static let fileName = "pes.json"
 		static let regionSelectionDefaultKey = "RegionSelection"
 		static let lastUpdateCheckDefaultKey = "LastUpdateCheck"
+		#if DEBUG && targetEnvironment(simulator)
+		static let updateGracePeriod = TimeInterval(2 * 60)
+		#else
+		static let updateGracePeriod = TimeInterval(15 * 60)
+		#endif
 	}
 
 	static let shared = PESManager()
@@ -105,8 +110,7 @@ class PESManager {
 		updateQueue.sync {
 
 			if let lastUpdate = UserDefaults.standard.object(forKey: Constants.lastUpdateCheckDefaultKey) as? Date {
-				let gracePeriod: TimeInterval = 15*60-1 // 15 minutes
-				if now.timeIntervalSince(lastUpdate) <= gracePeriod {
+				if now.timeIntervalSince(lastUpdate) <= Constants.updateGracePeriod {
 					completion(.tooSoon); return
 				}
 			}
@@ -130,7 +134,7 @@ class PESManager {
 					self.saveDataToDisk(pes)
 				}
 
-				#if DEBUG
+				#if DEBUG && targetEnvironment(simulator)
 				print("Stats for date \(pes.date):")
 				print()
 

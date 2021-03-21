@@ -13,6 +13,7 @@ class PESManager {
 		static let onlineURL = URL(string: "https://pes.misacek.net/pes.json")!
 		static let fileName = "pes.json"
 		static let regionSelectionDefaultKey = "RegionSelection"
+		static let lastUpdateCheckDefaultKey = "LastUpdateCheck"
 	}
 
 	static let shared = PESManager()
@@ -72,33 +73,45 @@ class PESManager {
 
 	enum UpdateCheckResult {
 		case success(PESData)
+		case alreadyUpToDate
+		case tooSoon
 		case noDataError
 		case dataError
 		case parsingError
-		case redundantError
 	}
 
 	typealias UpdateCompletion = (UpdateCheckResult) -> Void
 
-	let session = URLSession(configuration: .default)
-
-	func checkDataUpdate(completion: @escaping UpdateCompletion) {
-
-		if let data = data {
-			let dataDate = PESData.dateFormatter.string(from: data.date)
-			let nowDate = PESData.dateFormatter.string(from: .init())
-			if dataDate == nowDate { completion(.success(data)); return }
-		}
-
-		performDataUpdate(completion: completion)
-	}
+	let session: URLSession = {
+		let configuration = URLSessionConfiguration.default
+		configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
+		return URLSession(configuration: configuration)
+	}()
 
 	let updateQueue = DispatchQueue(label: "Update Queue")
 	let updateGroup = DispatchGroup()
 
-	func performDataUpdate(completion: @escaping UpdateCompletion) {
+	func checkDataUpdate(completion: @escaping UpdateCompletion) {
+
+		let now = Date()
+		let currentData = data
+
+		if let currentData = currentData {
+			let today = PESData.dateFormatter.string(from: Date())
+			let date = PESData.dateFormatter.string(from: currentData.date)
+			if today == date { completion(.alreadyUpToDate); return }
+		}
 
 		updateQueue.sync {
+
+			if let lastUpdate = UserDefaults.standard.object(forKey: Constants.lastUpdateCheckDefaultKey) as? Date {
+				let gracePeriod: TimeInterval = 15*60-1 // 15 minutes
+				if now.timeIntervalSince(lastUpdate) <= gracePeriod {
+					completion(.tooSoon); return
+				}
+			}
+
+			UserDefaults.standard.setValue(now, forKey: Constants.lastUpdateCheckDefaultKey)
 
 			updateGroup.enter()
 
@@ -108,7 +121,7 @@ class PESManager {
 
 				guard let data = data else { completion(.dataError); return }
 				guard let pes = self.parseData(data) else { completion(.parsingError); return }
-				guard pes.date != self.data?.date else { completion(.redundantError); return }
+				guard pes.date != self.data?.date else { completion(.alreadyUpToDate); return }
 
 				self.dataLock.lock()
 

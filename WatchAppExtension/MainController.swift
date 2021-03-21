@@ -58,11 +58,7 @@ class MainController: WKInterfaceController {
 	}
 
 	func reloadComplications() {
-		let server = CLKComplicationServer.sharedInstance()
-		for complication in server.activeComplications ?? [] {
-			server.reloadTimeline(for: complication)
-		}
-
+		ComplicationController.reloadComplications()
 	}
 
 	override func willActivate() {
@@ -70,7 +66,7 @@ class MainController: WKInterfaceController {
 			DispatchQueue.main.async {
 				if case .success(let data) = result {
 					self.data = data
-				} else if case .redundantError = result {
+				} else if case .alreadyUpToDate = result {
 					self.data = PESManager.shared.data
 				} else {
 					self.data = nil

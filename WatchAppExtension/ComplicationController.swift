@@ -10,6 +10,15 @@ import ClockKit
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
 
+	override init() {
+		PESManager.shared.checkDataUpdate { result in
+			guard case .success = result else { return }
+			DispatchQueue.main.async {
+				ComplicationController.reloadComplications()
+			}
+		}
+	}
+
 	// MARK: - Complication Configuration
 
 	@available(watchOSApplicationExtension 7.0, *)
@@ -61,6 +70,17 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 	func getLocalizableSampleTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
 		handler(template(for: complication, sample: true))
 	}
+}
+
+extension ComplicationController {
+
+	class func reloadComplications() {
+		let server = CLKComplicationServer.sharedInstance()
+		for complication in server.activeComplications ?? [] {
+			server.reloadTimeline(for: complication)
+		}
+	}
+
 }
 
 extension ComplicationController {

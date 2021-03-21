@@ -20,7 +20,9 @@ class MainController: WKInterfaceController {
 		indexLabel.setText(nil)
 
 		self.clearAllMenuItems()
-		self.addMenuItem(with: .more, title: "Pick Region", action: #selector(pickRegionAction))
+		self.addMenuItem(with: .more,
+						 title: NSLocalizedString("Pick Region", comment: "Menu item"),
+						 action: #selector(pickRegionAction))
 	}
 
 	@objc func pickRegionAction() {
@@ -50,7 +52,7 @@ class MainController: WKInterfaceController {
 		reloadComplications()
 
 		guard let elm = element else {
-			nameLabel.setText("No data")
+			nameLabel.setText(NSLocalizedString("No data", comment: "View label"))
 			indexLabel.setText(nil)
 			contentGroup.setBackgroundColor(.darkGray)
 			return

@@ -15,6 +15,8 @@
 		D601BE62256482CC002476B0 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601BE61256482CC002476B0 /* ComplicationController.swift */; };
 		D601BE64256482CC002476B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D601BE63256482CC002476B0 /* Assets.xcassets */; };
 		D601BE69256482CC002476B0 /* PESWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D601BE4A256482CB002476B0 /* PESWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D65DC7612607D73A006FBFBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D65DC7642607D73A006FBFBE /* Localizable.strings */; };
+		D65DC7622607D73A006FBFBE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D65DC7642607D73A006FBFBE /* Localizable.strings */; };
 		D666FB922607A8120035B41A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D666FB912607A8120035B41A /* MainView.swift */; };
 		D6C7641526062EB5009B987C /* PESElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7641426062EB5009B987C /* PESElements.swift */; };
 		D6C7641626062EB5009B987C /* PESElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7641426062EB5009B987C /* PESElements.swift */; };
@@ -101,6 +103,9 @@
 		D601BE63256482CC002476B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D601BE65256482CC002476B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D601BEB72564924A002476B0 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D65DC7542607D5C8006FBFBE /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Interface.strings; sourceTree = "<group>"; };
+		D65DC7632607D73A006FBFBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D65DC7682607D740006FBFBE /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D66147BF2607848C008AE991 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		D666FB912607A8120035B41A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D6C7641426062EB5009B987C /* PESElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PESElements.swift; sourceTree = "<group>"; };
@@ -164,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				D66147BF2607848C008AE991 /* Config.xcconfig */,
+				D65DC7642607D73A006FBFBE /* Localizable.strings */,
 				D6D1A750260680C600059979 /* CircularPro-Bold.otf */,
 				D6D1A751260680C600059979 /* CircularPro-Book.otf */,
 				D6D1A752260680C600059979 /* CircularPro-Medium.otf */,
@@ -302,6 +308,7 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
 			);
 			mainGroup = D6DA548C25633E6800CE5706;
 			productRefGroup = D6DA549625633E6800CE5706 /* Products */;
@@ -332,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D65DC7622607D73A006FBFBE /* Localizable.strings in Resources */,
 				D601BE64256482CC002476B0 /* Assets.xcassets in Resources */,
 				D6D1A75B260680C600059979 /* CircularPro-Medium.otf in Resources */,
 				D6D1A758260680C600059979 /* CircularPro-Book.otf in Resources */,
@@ -344,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6DA54A525633E6900CE5706 /* LaunchScreen.storyboard in Resources */,
+				D65DC7612607D73A006FBFBE /* Localizable.strings in Resources */,
 				D6DA54A225633E6900CE5706 /* Assets.xcassets in Resources */,
 				D6D1A759260680C600059979 /* CircularPro-Medium.otf in Resources */,
 				D6D1A753260680C600059979 /* CircularPro-Bold.otf in Resources */,
@@ -400,8 +409,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				D601BE4D256482CB002476B0 /* Base */,
+				D65DC7542607D5C8006FBFBE /* cs */,
 			);
 			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		D65DC7642607D73A006FBFBE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D65DC7632607D73A006FBFBE /* en */,
+				D65DC7682607D740006FBFBE /* cs */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		D6DA54A325633E6900CE5706 /* LaunchScreen.storyboard */ = {
@@ -488,6 +507,7 @@
 			baseConfigurationReference = D66147BF2607848C008AE991 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ENABLE_MODULES = YES;
@@ -548,6 +568,7 @@
 			baseConfigurationReference = D66147BF2607848C008AE991 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_ENABLE_MODULES = YES;

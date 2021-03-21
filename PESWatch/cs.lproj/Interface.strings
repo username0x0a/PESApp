@@ -1,0 +1,102 @@
+
+/* Class = "WKInterfaceLabel"; text = "Karlovy Vary"; ObjectID = "0B0-xC-sD9"; Note = "Category name"; */
+"0B0-xC-sD9.text" = "Karlovy Vary";
+
+/* Class = "WKInterfaceLabel"; text = "SM"; ObjectID = "7Bi-8m-rNa"; Note = "DNL"; */
+"7Bi-8m-rNa.text" = "JM";
+
+/* Class = "WKInterfaceLabel"; text = "ZL"; ObjectID = "DjI-DB-eXu"; Note = "DNL"; */
+"DjI-DB-eXu.text" = "ZL";
+
+/* Class = "WKInterfaceController"; title = "Region"; ObjectID = "DtI-VR-b5N"; */
+"DtI-VR-b5N.title" = "Region";
+
+/* Class = "WKInterfaceLabel"; text = "HK"; ObjectID = "GoE-B5-JM7"; Note = "DNL"; */
+"GoE-B5-JM7.text" = "HK";
+
+/* Class = "WKInterfaceLabel"; text = "123"; ObjectID = "HT3-lp-WVN"; */
+"HT3-lp-WVN.text" = "123";
+
+/* Class = "WKInterfaceLabel"; text = "VY"; ObjectID = "JNK-M6-ZZm"; Note = "DNL"; */
+"JNK-M6-ZZm.text" = "VY";
+
+/* Class = "WKInterfaceLabel"; text = "Hradec Králové"; ObjectID = "JP0-FB-bpX"; Note = "Category name"; */
+"JP0-FB-bpX.text" = "Hradec Králové";
+
+/* Class = "WKInterfaceLabel"; text = "PD"; ObjectID = "NI1-Oq-KfY"; Note = "DNL"; */
+"NI1-Oq-KfY.text" = "PD";
+
+/* Class = "WKInterfaceLabel"; text = "Prague"; ObjectID = "NMD-j8-PAI"; Note = "Category name"; */
+"NMD-j8-PAI.text" = "Praha";
+
+/* Class = "WKInterfaceLabel"; text = "Pardubice"; ObjectID = "O74-Iv-ers"; Note = "Category name"; */
+"O74-Iv-ers.text" = "Pardubice";
+
+/* Class = "WKInterfaceLabel"; text = "Central Bohemia"; ObjectID = "PBp-tT-8lc"; Note = "Category name"; */
+"PBp-tT-8lc.text" = "Střední Čechy";
+
+/* Class = "WKInterfaceLabel"; text = "Regions"; ObjectID = "QtE-pZ-6ZT"; */
+"QtE-pZ-6ZT.text" = "Regiony";
+
+/* Class = "WKInterfaceLabel"; text = "South Moravia"; ObjectID = "Rmk-r3-mBa"; Note = "Category name"; */
+"Rmk-r3-mBa.text" = "Jižní Morava";
+
+/* Class = "WKInterfaceLabel"; text = "Vysočina"; ObjectID = "S5M-ZH-gt7"; Note = "Category name"; */
+"S5M-ZH-gt7.text" = "Vysočina";
+
+/* Class = "WKInterfaceLabel"; text = "Moravia-Silesia"; ObjectID = "V52-Eb-rUv"; Note = "Category name"; */
+"V52-Eb-rUv.text" = "Slezsko";
+
+/* Class = "WKInterfaceLabel"; text = "SB"; ObjectID = "Xcj-mD-wuF"; Note = "DNL"; */
+"Xcj-mD-wuF.text" = "JČ";
+
+/* Class = "WKInterfaceLabel"; text = "KV"; ObjectID = "YYM-G9-ulp"; Note = "DNL"; */
+"YYM-G9-ulp.text" = "KV";
+
+/* Class = "WKInterfaceLabel"; text = "CB"; ObjectID = "b0O-m0-KYv"; Note = "DNL"; */
+"b0O-m0-KYv.text" = "SČ";
+
+/* Class = "WKInterfaceLabel"; text = "South Bohemia"; ObjectID = "bKq-Zy-vGv"; Note = "Category name"; */
+"bKq-Zy-vGv.text" = "Jižní Čechy";
+
+/* Class = "WKInterfaceLabel"; text = "CZ"; ObjectID = "f9P-d6-ehP"; Note = "DNL"; */
+"f9P-d6-ehP.text" = "ČR";
+
+/* Class = "WKInterfaceLabel"; text = "Zlín"; ObjectID = "fgp-lh-gVi"; Note = "Category name"; */
+"fgp-lh-gVi.text" = "Zlín";
+
+/* Class = "WKInterfaceLabel"; text = "LB"; ObjectID = "j3j-gF-Akz"; Note = "DNL"; */
+"j3j-gF-Akz.text" = "LB";
+
+/* Class = "WKInterfaceLabel"; text = "PH"; ObjectID = "jFg-Fs-XqY"; Note = "DNL"; */
+"jFg-Fs-XqY.text" = "PH";
+
+/* Class = "WKInterfaceLabel"; text = "PL"; ObjectID = "lwR-Rf-6Hj"; Note = "DNL"; */
+"lwR-Rf-6Hj.text" = "PL";
+
+/* Class = "WKInterfaceLabel"; text = "OL"; ObjectID = "mct-9X-ucB"; Note = "DNL"; */
+"mct-9X-ucB.text" = "OL";
+
+/* Class = "WKInterfaceLabel"; text = "Region"; ObjectID = "o8k-dn-oLa"; */
+"o8k-dn-oLa.text" = "Region";
+
+/* Class = "WKInterfaceLabel"; text = "Olomouc"; ObjectID = "ofd-1l-dxw"; Note = "Category name"; */
+"ofd-1l-dxw.text" = "Olomouc";
+
+/* Class = "WKInterfaceLabel"; text = "Czechia"; ObjectID = "qQv-ZV-9kB"; Note = "Category name"; */
+"qQv-ZV-9kB.text" = "Česko";
+
+/* Class = "WKInterfaceLabel"; text = "UL"; ObjectID = "tnn-wI-UOW"; Note = "DNL"; */
+"tnn-wI-UOW.text" = "UL";
+
+/* Class = "WKInterfaceLabel"; text = "MS"; ObjectID = "u4z-oy-SNO"; Note = "DNL"; */
+"u4z-oy-SNO.text" = "MS";
+
+/* Class = "WKInterfaceLabel"; text = "Liberec"; ObjectID = "vHR-ut-k76"; Note = "Category name"; */
+"vHR-ut-k76.text" = "Liberec";
+
+/* Class = "WKInterfaceLabel"; text = "Ústí nad Labem"; ObjectID = "vNp-Zn-myb"; Note = "Category name"; */
+"vNp-Zn-myb.text" = "Ústí nad Labem";
+
+/* Class = "WKInterfaceLabel"; text = "Pilsen"; ObjectID = "zZz-od-bMg"; Note = "Category name"; */
+"zZz-od-bMg.text" = "Plzeň";

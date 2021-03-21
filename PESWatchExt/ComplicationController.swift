@@ -112,6 +112,18 @@ extension ComplicationController {
 		]
 	}()
 
+	enum StringPattern: String {
+		case index
+		case level
+	}
+
+	func str(_ pattern: StringPattern) -> String {
+		switch pattern {
+			case .index: return NSLocalizedString("Index", comment: "String pattern")
+			case .level: return NSLocalizedString("Level", comment: "String pattern")
+		}
+	}
+
 	func template(for complication: CLKComplication, sample: Bool = false) -> CLKComplicationTemplate? {
 
 		let data = PESManager.shared.data
@@ -141,8 +153,8 @@ extension ComplicationController {
 				let t = CLKComplicationTemplateModularLargeStandardBody()
 				t.headerTextProvider = CLKSimpleTextProvider(text: element?.name ?? "")
 				t.headerTextProvider.tintColor = color
-				t.body1TextProvider = CLKSimpleTextProvider(text: "Index: \(index)")
-				t.body2TextProvider = CLKSimpleTextProvider(text: "Level: \(rating.rawValue)")
+				t.body1TextProvider = CLKSimpleTextProvider(text: str(.index) + ": \(index)")
+				t.body2TextProvider = CLKSimpleTextProvider(text: str(.level) + ": \(rating.rawValue)")
 				return t
 
 			case .utilitarianSmall:
@@ -162,7 +174,7 @@ extension ComplicationController {
 
 			case .utilitarianLarge:
 				let t = CLKComplicationTemplateUtilitarianLargeFlat()
-				t.textProvider = CLKSimpleTextProvider(text: "PES Level \(rating.rawValue) · Index \(index)")
+				t.textProvider = CLKSimpleTextProvider(text: "PES " + str(.level) + " \(rating.rawValue) · " + str(.index) + " \(index)")
 				t.textProvider.tintColor = color
 				return t
 
@@ -198,7 +210,7 @@ extension ComplicationController {
 				s.bottomTextProvider = CLKSimpleTextProvider(text: "PES")
 				s.bottomTextProvider.tintColor = color
 				t.circularTemplate = s
-				t.textProvider = CLKSimpleTextProvider(text: "PES Level \(rating.rawValue) • Index \(index)")
+				t.textProvider = CLKSimpleTextProvider(text: "PES " + str(.level) + " \(rating.rawValue) · " + str(.index) + " \(index)")
 				return t
 
 			case .graphicCircular:

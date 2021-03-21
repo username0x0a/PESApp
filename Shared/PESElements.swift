@@ -20,8 +20,8 @@ enum PESError: Error {
 	case dataParsing
 }
 
-enum PESRegion: String, Codable, CodingKey {
-	case Country        = "CZ000"
+enum PESRegion: String, Codable, CodingKey, CaseIterable {
+	case Czechia        = "CZ000"
 	case Prague         = "CZ010"
 	case CentralBohemia = "CZ020"
 	case SouthBohemia   = "CZ031"
@@ -50,7 +50,7 @@ struct PESData: PESElement, Codable {
 
 	// MARK: Definition
 
-	let id = PESRegion.Country
+	let id = PESRegion.Czechia
 	let name = "Česko"
 	let date: Date
 	let index: Int

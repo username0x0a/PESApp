@@ -12,6 +12,7 @@ class PESManager {
 	struct Constants {
 		static let onlineURL = URL(string: "https://pes.misacek.net/pes.json")!
 		static let fileName = "pes.json"
+		static let regionSelectionDefaultKey = "RegionSelection"
 	}
 
 	static let shared = PESManager()
@@ -19,13 +20,30 @@ class PESManager {
 	var data: PESData?
 	let dataLock = NSLock()
 
+	var regionSelection: PESRegion? {
+		didSet {
+			if let selection = regionSelection?.rawValue {
+				UserDefaults.standard.set(selection, forKey: Constants.regionSelectionDefaultKey)
+			} else {
+				UserDefaults.standard.removeObject(forKey: Constants.regionSelectionDefaultKey)
+			}
+		}
+	}
+
 	var dataFilePath: String = {
 		NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true).first!
 			+ "/" + Constants.fileName
 	}()
 
 	init() {
+		loadSelection()
 		loadDataFromDisk()
+	}
+
+	func loadSelection() {
+		if let selection = UserDefaults.standard.string(forKey: Constants.regionSelectionDefaultKey) {
+			regionSelection = PESRegion(rawValue: selection) ?? .Czechia
+		}
 	}
 
 	func loadDataFromDisk() {

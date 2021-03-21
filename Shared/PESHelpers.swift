@@ -2,7 +2,7 @@
 import Foundation
 
 let PESRegionShortcut: [PESRegion: String] = [
-	.Country:        "ČR",
+	.Czechia:        "ČR",
 	.Prague:         "PH",
 	.CentralBohemia: "SC",
 	.SouthBohemia:   "JC",
@@ -17,6 +17,24 @@ let PESRegionShortcut: [PESRegion: String] = [
 	.Olomouc:        "OL",
 	.Zlin:           "ZL",
 	.MoraviaSilesia: "MS",
+]
+
+let PESRegionName: [PESRegion: String] = [
+	.Czechia:        NSLocalizedString("Czechia", comment: "Region name"),
+	.Prague:         NSLocalizedString("Prague", comment: "Region name"),
+	.CentralBohemia: NSLocalizedString("Central Bohemia", comment: "Region name"),
+	.SouthBohemia:   NSLocalizedString("South Bohemia", comment: "Region name"),
+	.Pilsen:         NSLocalizedString("Pilsen", comment: "Region name"),
+	.KarlovyVary:    NSLocalizedString("Karlovy Vary", comment: "Region name"),
+	.Usti:           NSLocalizedString("Ustí nad Labem", comment: "Region name"),
+	.Liberec:        NSLocalizedString("Liberec", comment: "Region name"),
+	.HradecKralove:  NSLocalizedString("Hradec Králové", comment: "Region name"),
+	.Pardubice:      NSLocalizedString("Pardubice", comment: "Region name"),
+	.Vysocina:       NSLocalizedString("Vysočina", comment: "Region name"),
+	.SouthMoravia:   NSLocalizedString("South Moravia", comment: "Region name"),
+	.Olomouc:        NSLocalizedString("Olomouc", comment: "Region name"),
+	.Zlin:           NSLocalizedString("Zlín", comment: "Region name"),
+	.MoraviaSilesia: NSLocalizedString("Moravia-Silesia", comment: "Region name"),
 ]
 
 let PESRatingColor: [PESRating: UInt] = [

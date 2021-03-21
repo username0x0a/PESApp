@@ -15,6 +15,7 @@
 		D601BE62256482CC002476B0 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D601BE61256482CC002476B0 /* ComplicationController.swift */; };
 		D601BE64256482CC002476B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D601BE63256482CC002476B0 /* Assets.xcassets */; };
 		D601BE69256482CC002476B0 /* PESWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D601BE4A256482CB002476B0 /* PESWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D666FB922607A8120035B41A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D666FB912607A8120035B41A /* MainView.swift */; };
 		D6C7641526062EB5009B987C /* PESElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7641426062EB5009B987C /* PESElements.swift */; };
 		D6C7641626062EB5009B987C /* PESElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7641426062EB5009B987C /* PESElements.swift */; };
 		D6C764192606308C009B987C /* PESManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C764182606308C009B987C /* PESManager.swift */; };
@@ -31,10 +32,7 @@
 		D6D1A75A260680C600059979 /* CircularPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6D1A752260680C600059979 /* CircularPro-Medium.otf */; };
 		D6D1A75B260680C600059979 /* CircularPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6D1A752260680C600059979 /* CircularPro-Medium.otf */; };
 		D6D1A7682606A5D100059979 /* RegionSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D1A7672606A5D100059979 /* RegionSelectionController.swift */; };
-		D6DA549925633E6800CE5706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA549825633E6800CE5706 /* AppDelegate.swift */; };
 		D6DA549B25633E6800CE5706 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA549A25633E6800CE5706 /* SceneDelegate.swift */; };
-		D6DA549D25633E6800CE5706 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA549C25633E6800CE5706 /* ViewController.swift */; };
-		D6DA54A025633E6800CE5706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6DA549E25633E6800CE5706 /* Main.storyboard */; };
 		D6DA54A225633E6900CE5706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6DA54A125633E6900CE5706 /* Assets.xcassets */; };
 		D6DA54A525633E6900CE5706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6DA54A325633E6900CE5706 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -104,6 +102,7 @@
 		D601BE65256482CC002476B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D601BEB72564924A002476B0 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D66147BF2607848C008AE991 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		D666FB912607A8120035B41A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		D6C7641426062EB5009B987C /* PESElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PESElements.swift; sourceTree = "<group>"; };
 		D6C764182606308C009B987C /* PESManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PESManager.swift; sourceTree = "<group>"; };
 		D6C7644F2606610B009B987C /* PESHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PESHelpers.swift; sourceTree = "<group>"; };
@@ -112,10 +111,7 @@
 		D6D1A752260680C600059979 /* CircularPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CircularPro-Medium.otf"; sourceTree = "<group>"; };
 		D6D1A7672606A5D100059979 /* RegionSelectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegionSelectionController.swift; sourceTree = "<group>"; };
 		D6DA549525633E6800CE5706 /* PES.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PES.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6DA549825633E6800CE5706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6DA549A25633E6800CE5706 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D6DA549C25633E6800CE5706 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D6DA549F25633E6800CE5706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6DA54A125633E6900CE5706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6DA54A425633E6900CE5706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6DA54A625633E6900CE5706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -204,10 +200,8 @@
 		D6DA549725633E6800CE5706 /* PES */ = {
 			isa = PBXGroup;
 			children = (
-				D6DA549825633E6800CE5706 /* AppDelegate.swift */,
 				D6DA549A25633E6800CE5706 /* SceneDelegate.swift */,
-				D6DA549C25633E6800CE5706 /* ViewController.swift */,
-				D6DA549E25633E6800CE5706 /* Main.storyboard */,
+				D666FB912607A8120035B41A /* MainView.swift */,
 				D6DA54A125633E6900CE5706 /* Assets.xcassets */,
 				D6DA54A325633E6900CE5706 /* LaunchScreen.storyboard */,
 				D6DA54A625633E6900CE5706 /* Info.plist */,
@@ -351,7 +345,6 @@
 			files = (
 				D6DA54A525633E6900CE5706 /* LaunchScreen.storyboard in Resources */,
 				D6DA54A225633E6900CE5706 /* Assets.xcassets in Resources */,
-				D6DA54A025633E6800CE5706 /* Main.storyboard in Resources */,
 				D6D1A759260680C600059979 /* CircularPro-Medium.otf in Resources */,
 				D6D1A753260680C600059979 /* CircularPro-Bold.otf in Resources */,
 				D6D1A756260680C600059979 /* CircularPro-Book.otf in Resources */,
@@ -379,8 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6DA549D25633E6800CE5706 /* ViewController.swift in Sources */,
-				D6DA549925633E6800CE5706 /* AppDelegate.swift in Sources */,
+				D666FB922607A8120035B41A /* MainView.swift in Sources */,
 				D6C764502606610B009B987C /* PESHelpers.swift in Sources */,
 				D6C7641526062EB5009B987C /* PESElements.swift in Sources */,
 				D6DA549B25633E6800CE5706 /* SceneDelegate.swift in Sources */,
@@ -410,14 +402,6 @@
 				D601BE4D256482CB002476B0 /* Base */,
 			);
 			name = Interface.storyboard;
-			sourceTree = "<group>";
-		};
-		D6DA549E25633E6800CE5706 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6DA549F25633E6800CE5706 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		D6DA54A325633E6900CE5706 /* LaunchScreen.storyboard */ = {
@@ -549,13 +533,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Debug;
 		};
@@ -604,14 +588,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = NDEBUG;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 5.2;
+				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};

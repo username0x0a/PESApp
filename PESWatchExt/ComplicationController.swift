@@ -133,7 +133,7 @@ extension ComplicationController {
 		let today = data?.isToday == true || sample
 
 		if !today {
-			allColors = allColors.map { $0.adjusted(by: -0.3) }
+			allColors = allColors.map { $0.adjusted(by: -0.2) }
 		}
 
 		let pesText = str(today ? .pes : .outdatedPes)
@@ -149,10 +149,10 @@ extension ComplicationController {
 
 			case .modularLarge:
 				let t = CLKComplicationTemplateModularLargeStandardBody()
-				t.headerTextProvider = CLKSimpleTextProvider(text: element?.name ?? "")
+				t.headerTextProvider = CLKSimpleTextProvider(text: pesText)
 				t.headerTextProvider.tintColor = color
-				t.body1TextProvider = CLKSimpleTextProvider(text: str(.index) + ": \(index)")
-				t.body2TextProvider = CLKSimpleTextProvider(text: str(.level) + ": \(rating.rawValue)")
+				t.body1TextProvider = CLKSimpleTextProvider(text: str(.level) + ": \(rating.rawValue)")
+				t.body2TextProvider = CLKSimpleTextProvider(text: str(.index) + ": \(index)")
 				return t
 
 			case .utilitarianSmall:
@@ -166,7 +166,7 @@ extension ComplicationController {
 
 			case .utilitarianSmallFlat:
 				let t = CLKComplicationTemplateUtilitarianSmallFlat()
-				t.textProvider = CLKSimpleTextProvider(text: "PES \(rating.rawValue)")
+				t.textProvider = CLKSimpleTextProvider(text: pesText + " \(rating.rawValue)")
 				t.textProvider.tintColor = color
 				return t
 
@@ -206,7 +206,7 @@ extension ComplicationController {
 				s.gaugeProvider = CLKSimpleGaugeProvider(style: .ring,
 					gaugeColors: allColors, gaugeColorLocations: allLocations, fillFraction: Float(index)/100)
 				s.centerTextProvider = CLKSimpleTextProvider(text: "\(index)")
-				s.bottomTextProvider = CLKSimpleTextProvider(text: "PES")
+				s.bottomTextProvider = CLKSimpleTextProvider(text: "IDX")
 				s.bottomTextProvider.tintColor = color
 				t.circularTemplate = s
 				t.textProvider = CLKSimpleTextProvider(text:
@@ -223,9 +223,20 @@ extension ComplicationController {
 				return t
 
 			case .graphicRectangular:
-				break
+				let t = CLKComplicationTemplateGraphicRectangularTextGauge()
+				t.gaugeProvider = CLKSimpleGaugeProvider(style: .ring,
+					gaugeColors: allColors, gaugeColorLocations: allLocations, fillFraction: Float(index)/100)
+				t.headerTextProvider = CLKSimpleTextProvider(text: pesText + " " + str(.level) + " \(rating.rawValue)")
+				t.body1TextProvider = CLKSimpleTextProvider(text: str(.index) + " \(index)")
+				return t
 
 			case .graphicExtraLarge:
+				if #available(watchOSApplicationExtension 7.0, *) {
+					let t = CLKComplicationTemplateGraphicExtraLargeCircularStackText()
+					t.line1TextProvider = CLKSimpleTextProvider(text: pesText + " \(rating.rawValue)")
+					t.line2TextProvider = CLKSimpleTextProvider(text: "IDX \(index)")
+					return t
+				}
 				break
 
 			@unknown default:

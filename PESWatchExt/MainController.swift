@@ -56,7 +56,7 @@ class MainController: WKInterfaceController {
 			nameLabel.setText(NSLocalizedString("No data", comment: "View label"))
 			indexLabel.setText(nil)
 			contentGroup.setBackgroundColor(.darkGray)
-			outdatedIndicator.setHidden(false)
+			outdatedIndicator.setHidden(true)
 			return
 		}
 
@@ -67,7 +67,7 @@ class MainController: WKInterfaceController {
 		nameLabel.setText(PESRegionName[elm.id])
 		indexLabel.setText("\(elm.index)")
 		contentGroup.setBackgroundColor(UIColor(rgb: color).withAlphaComponent(alpha))
-		outdatedIndicator.setHidden(false)
+		outdatedIndicator.setHidden(todaysData)
 	}
 
 	func reloadComplications() {

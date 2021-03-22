@@ -54,6 +54,8 @@ struct MainView: View {
 		return elms.sorted { $0.id.rawValue < $1.id.rawValue }
 	}
 
+	var upToDateData: Bool { PESManager.shared.data?.isToday == true }
+
 	var body: some View {
 
 		ScrollView {
@@ -66,6 +68,10 @@ struct MainView: View {
 								Text("\(element.name)")
 									.font(.custom("CircularPro-Medium", size: 24))
 								Spacer()
+								if element.id == .Czechia && !upToDateData {
+									Text("*")
+										.font(.custom("CircularPro-Bold", size: 28))
+								}
 								ZStack {
 									Text("\(element.index)")
 										.font(.custom("CircularPro-Bold", size: 28))

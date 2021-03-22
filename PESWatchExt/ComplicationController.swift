@@ -91,36 +91,26 @@ extension ComplicationController {
 		let no3Color = UIColor(rgb: PESRatingColor[.no3]!)
 		let no4Color = UIColor(rgb: PESRatingColor[.no4]!)
 		let no5Color = UIColor(rgb: PESRatingColor[.no5]!)
-
-		return [
-			no1Color, no1Color,
-			no2Color, no2Color,
-			no3Color, no3Color,
-			no4Color, no4Color,
-			no5Color, no5Color
-		]
+		return [no1Color, no2Color, no2Color, no3Color, no4Color, no5Color]
 	}()
 
 	static let gaugeLocations: [NSNumber] = {
-		let shift = 0.05
-		return [
-			NSNumber(value: 0), NSNumber(value: 0.2-shift),
-			NSNumber(value: 0.2+shift), NSNumber(value: 0.4-shift),
-			NSNumber(value: 0.4+shift), NSNumber(value: 0.6-shift),
-			NSNumber(value: 0.6+shift), NSNumber(value: 0.75-shift),
-			NSNumber(value: 0.75+shift), NSNumber(value: 1)
-		]
+		[0, 0.2, 0.3, 0.42, 0.6, 1].map { NSNumber(value: $0) }
 	}()
 
 	enum StringPattern: String {
 		case index
 		case level
+		case pes
+		case outdatedPes
 	}
 
 	func str(_ pattern: StringPattern) -> String {
 		switch pattern {
 			case .index: return NSLocalizedString("Index", comment: "String pattern")
 			case .level: return NSLocalizedString("Level", comment: "String pattern")
+			case .pes: return "PES"
+			case .outdatedPes: return "PES*"
 		}
 	}
 
@@ -137,8 +127,16 @@ extension ComplicationController {
 		let rating = PESRatingForIndex(index)
 		let color = UIColor(rgb: PESRatingColor[rating] ?? 0x000000)
 
-		let allColors = Self.gaugeColors
+		var allColors = Self.gaugeColors
 		let allLocations = Self.gaugeLocations
+
+		let today = data?.isToday == true || sample
+
+		if !today {
+			allColors = allColors.map { $0.adjusted(by: -0.3) }
+		}
+
+		let pesText = str(today ? .pes : .outdatedPes)
 
 		switch complication.family {
 
@@ -174,7 +172,8 @@ extension ComplicationController {
 
 			case .utilitarianLarge:
 				let t = CLKComplicationTemplateUtilitarianLargeFlat()
-				t.textProvider = CLKSimpleTextProvider(text: "PES " + str(.level) + " \(rating.rawValue) · " + str(.index) + " \(index)")
+				t.textProvider = CLKSimpleTextProvider(text:
+					pesText + " " + str(.level) + " \(rating.rawValue) · " + str(.index) + " \(index)")
 				t.textProvider.tintColor = color
 				return t
 
@@ -196,7 +195,7 @@ extension ComplicationController {
 				let t = CLKComplicationTemplateGraphicCornerGaugeText()
 				t.leadingTextProvider = CLKSimpleTextProvider(text: "\(rating.rawValue)")
 				t.trailingTextProvider = CLKSimpleTextProvider(text: "\(index)")
-				t.outerTextProvider = CLKSimpleTextProvider(text: "PES")
+				t.outerTextProvider = CLKSimpleTextProvider(text: pesText)
 				t.gaugeProvider = CLKSimpleGaugeProvider(style: .ring,
 					gaugeColors: allColors, gaugeColorLocations: allLocations, fillFraction: Float(index)/100)
 				return t
@@ -210,7 +209,8 @@ extension ComplicationController {
 				s.bottomTextProvider = CLKSimpleTextProvider(text: "PES")
 				s.bottomTextProvider.tintColor = color
 				t.circularTemplate = s
-				t.textProvider = CLKSimpleTextProvider(text: "PES " + str(.level) + " \(rating.rawValue) · " + str(.index) + " \(index)")
+				t.textProvider = CLKSimpleTextProvider(text:
+					pesText + " " + str(.level) + " \(rating.rawValue) · " + str(.index) + " \(index)")
 				return t
 
 			case .graphicCircular:

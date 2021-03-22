@@ -14,6 +14,7 @@ class MainController: WKInterfaceController {
 	@IBOutlet var contentGroup: WKInterfaceGroup!
 	@IBOutlet var nameLabel: WKInterfaceLabel!
 	@IBOutlet var indexLabel: WKInterfaceLabel!
+	@IBOutlet var outdatedIndicator: WKInterfaceGroup!
 
 	override func awake(withContext context: Any?) {
 		nameLabel.setText(nil)
@@ -55,13 +56,18 @@ class MainController: WKInterfaceController {
 			nameLabel.setText(NSLocalizedString("No data", comment: "View label"))
 			indexLabel.setText(nil)
 			contentGroup.setBackgroundColor(.darkGray)
+			outdatedIndicator.setHidden(false)
 			return
 		}
+
+		let todaysData = data?.isToday == true
+		let color = PESRatingColor[elm._rating]!
+		let alpha: CGFloat = todaysData ? 1 : 0.45
+
 		nameLabel.setText(PESRegionName[elm.id])
 		indexLabel.setText("\(elm.index)")
-		if let color = PESRatingColor[elm._rating] {
-			contentGroup.setBackgroundColor(UIColor(rgb: color))
-		}
+		contentGroup.setBackgroundColor(UIColor(rgb: color).withAlphaComponent(alpha))
+		outdatedIndicator.setHidden(false)
 	}
 
 	func reloadComplications() {
@@ -73,10 +79,8 @@ class MainController: WKInterfaceController {
 			DispatchQueue.main.async {
 				if case .success(let data) = result {
 					self.data = data
-				} else if case .alreadyUpToDate = result {
+				} else  {
 					self.data = PESManager.shared.data
-				} else {
-					self.data = nil
 				}
 			}
 		}

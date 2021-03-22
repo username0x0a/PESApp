@@ -74,6 +74,16 @@
                                                 <fontDescription key="font" name="CircularPro-Bold" family="Circular Pro" pointSize="74"/>
                                             </variation>
                                         </label>
+                                        <group height="1" alignment="left" layout="vertical" spacing="0.0" id="euR-vF-u4o">
+                                            <items>
+                                                <label alignment="left" verticalAlignment="bottom" text="*" textAlignment="left" id="4LH-0A-gMh">
+                                                    <fontDescription key="font" name="CircularPro-Bold" family="Circular Pro" pointSize="86"/>
+                                                    <variation key="device=watch38mm">
+                                                        <fontDescription key="font" name="CircularPro-Bold" family="Circular Pro" pointSize="74"/>
+                                                    </variation>
+                                                </label>
+                                            </items>
+                                        </group>
                                     </items>
                                 </group>
                             </items>
@@ -88,6 +98,7 @@
                         <outlet property="contentGroup" destination="dhv-k3-Bot" id="xWv-zb-CqL"/>
                         <outlet property="indexLabel" destination="HT3-lp-WVN" id="dUv-NA-mdt"/>
                         <outlet property="nameLabel" destination="o8k-dn-oLa" id="mC9-Kt-aB2"/>
+                        <outlet property="outdatedIndicator" destination="euR-vF-u4o" id="nQY-HJ-rPu"/>
                     </connections>
                 </controller>
             </objects>

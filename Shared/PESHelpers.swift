@@ -53,6 +53,14 @@ func PESRatingForIndex(_ index: Int) -> PESRating {
 	return .no1
 }
 
+extension PESData {
+	var isToday: Bool {
+		let dataDate = Self.dateFormatter.string(from: date)
+		let nowDate = Self.dateFormatter.string(from: Date())
+		return dataDate == nowDate
+	}
+}
+
 #if canImport(UIKit)
 import UIKit
 #endif
@@ -64,12 +72,24 @@ import WatchKit
 #if canImport(UIKit) || canImport(WatchKit)
 
 extension UIColor {
+
 	convenience public init(rgb: UInt, alpha: CGFloat = 1) {
 		let red = CGFloat((rgb & 0xFF0000) >> 16) / 255
 		let green = CGFloat((rgb & 0xFF00) >> 8) / 255
 		let blue = CGFloat((rgb & 0xFF) >> 0) / 255
 		self.init(red: red, green: green, blue: blue, alpha: alpha)
 	}
+
+	func adjusted(by step: CGFloat) -> UIColor {
+		var r: CGFloat = 0; var g: CGFloat = 0
+		var b: CGFloat = 0; var a: CGFloat = 0
+		self.getRed(&r, green: &g, blue: &b, alpha: &a)
+		r = max(0, min(r + step, 1))
+		g = max(0, min(g + step, 1))
+		b = max(0, min(b + step, 1))
+		return .init(red: r, green: g, blue: b, alpha: a)
+	}
+
 }
 
 #endif

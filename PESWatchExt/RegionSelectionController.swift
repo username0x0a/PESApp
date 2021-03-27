@@ -8,12 +8,6 @@
 import WatchKit
 import Foundation
 
-class RegionSelectionButton: WKInterfaceButton {
-	@IBOutlet var shortLabel: WKInterfaceLabel!
-	@IBOutlet var nameLabel: WKInterfaceLabel!
-	var region: PESRegion?
-}
-
 class RegionSelectionController: WKInterfaceController {
 
 	@IBOutlet var buttonsGroup: WKInterfaceGroup!

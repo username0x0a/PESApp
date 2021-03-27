@@ -5,6 +5,9 @@
 /* Class = "WKInterfaceLabel"; text = "SM"; ObjectID = "7Bi-8m-rNa"; Note = "DNL"; */
 "7Bi-8m-rNa.text" = "JM";
 
+/* Class = "WKInterfaceLabel"; text = "Tap to change"; ObjectID = "9iN-T5-DSw"; Note = "DNL"; */
+"9iN-T5-DSw.text" = "↑ Změnit";
+
 /* Class = "WKInterfaceLabel"; text = "ZL"; ObjectID = "DjI-DB-eXu"; Note = "DNL"; */
 "DjI-DB-eXu.text" = "ZL";
 
@@ -45,7 +48,7 @@
 "S5M-ZH-gt7.text" = "Vysočina";
 
 /* Class = "WKInterfaceLabel"; text = "Moravia-Silesia"; ObjectID = "V52-Eb-rUv"; Note = "Category name"; */
-"V52-Eb-rUv.text" = "Slezsko";
+"V52-Eb-rUv.text" = "Severní Morava a Slezsko";
 
 /* Class = "WKInterfaceLabel"; text = "SB"; ObjectID = "Xcj-mD-wuF"; Note = "DNL"; */
 "Xcj-mD-wuF.text" = "JČ";

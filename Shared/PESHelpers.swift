@@ -50,7 +50,7 @@ func PESRatingForIndex(_ index: Int) -> PESRating {
 	if index >= 60 { return .no4 }
 	if index >= 40 { return .no3 }
 	if index >= 20 { return .no2 }
-	return .no1
+	                 return .no1
 }
 
 extension PESData {

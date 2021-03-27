@@ -13,6 +13,7 @@ class MainController: WKInterfaceController {
 
 	@IBOutlet var contentGroup: WKInterfaceGroup!
 	@IBOutlet var nameLabel: WKInterfaceLabel!
+	@IBOutlet var chanageLabel: WKInterfaceLabel!
 	@IBOutlet var indexLabel: WKInterfaceLabel!
 	@IBOutlet var outdatedIndicator: WKInterfaceGroup!
 
@@ -22,8 +23,8 @@ class MainController: WKInterfaceController {
 
 		self.clearAllMenuItems()
 		self.addMenuItem(with: .more,
-						 title: NSLocalizedString("Pick Region", comment: "Menu item"),
-						 action: #selector(pickRegionAction))
+		                title: NSLocalizedString("Pick Region", comment: "Menu item"),
+		               action: #selector(pickRegionAction))
 	}
 
 	@objc func pickRegionAction() {
@@ -54,6 +55,7 @@ class MainController: WKInterfaceController {
 
 		guard let elm = element else {
 			nameLabel.setText(NSLocalizedString("No data", comment: "View label"))
+			chanageLabel.setHidden(true)
 			indexLabel.setText(nil)
 			contentGroup.setBackgroundColor(.darkGray)
 			outdatedIndicator.setHidden(true)
@@ -61,12 +63,14 @@ class MainController: WKInterfaceController {
 		}
 
 		let todaysData = data?.isToday == true
-		let color = PESRatingColor[elm._rating]!
 		let alpha: CGFloat = todaysData ? 1 : 0.45
+		let colorValue = PESRatingColor[elm._rating]!
+		let color = UIColor(rgb: colorValue).withAlphaComponent(alpha)
 
 		nameLabel.setText(PESRegionName[elm.id])
+		chanageLabel.setHidden(region != .Czechia)
 		indexLabel.setText("\(elm.index)")
-		contentGroup.setBackgroundColor(UIColor(rgb: color).withAlphaComponent(alpha))
+		contentGroup.setBackgroundColor(color)
 		outdatedIndicator.setHidden(todaysData)
 	}
 

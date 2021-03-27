@@ -34,6 +34,7 @@
 	<array>
 		<string>CircularPro-Medium.otf</string>
 		<string>CircularPro-Bold.otf</string>
+		<string>CircularPro-Book.otf</string>
 	</array>
 	<key>CFBundleShortVersionString</key>
 	<string>$(BUNDLE_VERSION)</string>

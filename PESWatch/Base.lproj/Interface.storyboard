@@ -10,6 +10,9 @@
         <array key="CircularPro-Bold.otf">
             <string>CircularPro-Bold</string>
         </array>
+        <array key="CircularPro-Book.otf">
+            <string>CircularPro-Book</string>
+        </array>
         <array key="CircularPro-Medium.otf">
             <string>CircularPro-Medium</string>
         </array>
@@ -46,8 +49,8 @@
                                         <group width="1" height="32" alignment="center" spacing="0.0" id="bKT-eu-GVq"/>
                                         <group width="1" height="1" heightAdjustment="-32" alignment="center" spacing="0.0" id="tf3-OT-1OO">
                                             <items>
-                                                <button alignment="left" id="vhr-00-mMw">
-                                                    <group key="contentGroup" width="1" alignment="left" id="Nnf-03-E2j">
+                                                <button alignment="center" id="vhr-00-mMw">
+                                                    <group key="contentGroup" width="1" alignment="left" layout="vertical" id="Nnf-03-E2j">
                                                         <items>
                                                             <label width="1" widthAdjustment="-32" alignment="center" text="Region" textAlignment="right" numberOfLines="3" minimumScaleFactor="0.5" id="o8k-dn-oLa">
                                                                 <fontDescription key="font" name="CircularPro-Medium" family="Circular Pro" pointSize="22"/>
@@ -55,6 +58,14 @@
                                                                     <fontDescription key="font" name="CircularPro-Medium" family="Circular Pro" pointSize="18"/>
                                                                 </variation>
                                                             </label>
+                                                            <label width="1" widthAdjustment="-32" alignment="center" text="Tap ↑ to change" textAlignment="right" id="9iN-T5-DSw">
+                                                                <color key="textColor" white="1" alpha="0.4189365931919643" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="font" name="CircularPro-Book" family="Circular Pro" pointSize="14"/>
+                                                                <variation key="device=watch38mm">
+                                                                    <fontDescription key="font" name="CircularPro-Book" family="Circular Pro" pointSize="10"/>
+                                                                </variation>
+                                                            </label>
+                                                            <group width="1" alignment="left" id="2JR-2d-G1n"/>
                                                         </items>
                                                     </group>
                                                     <connections>
@@ -95,6 +106,7 @@
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                     <connections>
+                        <outlet property="chanageLabel" destination="9iN-T5-DSw" id="0t5-fF-ajz"/>
                         <outlet property="contentGroup" destination="dhv-k3-Bot" id="xWv-zb-CqL"/>
                         <outlet property="indexLabel" destination="HT3-lp-WVN" id="dUv-NA-mdt"/>
                         <outlet property="nameLabel" destination="o8k-dn-oLa" id="mC9-Kt-aB2"/>

@@ -155,9 +155,9 @@
 		D601BE5A256482CC002476B0 /* PESWatchExt */ = {
 			isa = PBXGroup;
 			children = (
+				D601BE5D256482CC002476B0 /* ExtensionDelegate.swift */,
 				D601BE5B256482CC002476B0 /* MainController.swift */,
 				D6D1A7672606A5D100059979 /* RegionSelectionController.swift */,
-				D601BE5D256482CC002476B0 /* ExtensionDelegate.swift */,
 				D601BE61256482CC002476B0 /* ComplicationController.swift */,
 				D601BE63256482CC002476B0 /* Assets.xcassets */,
 				D601BE65256482CC002476B0 /* Info.plist */,

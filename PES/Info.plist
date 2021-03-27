@@ -26,6 +26,7 @@
 	<array>
 		<string>CircularPro-Medium.otf</string>
 		<string>CircularPro-Bold.otf</string>
+		<string>CircularPro-Book.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

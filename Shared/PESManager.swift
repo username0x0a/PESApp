@@ -28,11 +28,8 @@ class PESManager {
 
 	var regionSelection: PESRegion? {
 		didSet {
-			if let selection = regionSelection?.rawValue {
-				UserDefaults.standard.set(selection, forKey: Constants.regionSelectionDefaultKey)
-			} else {
-				UserDefaults.standard.removeObject(forKey: Constants.regionSelectionDefaultKey)
-			}
+			let selection = regionSelection?.rawValue
+			UserDefaults.standard.set(selection, forKey: Constants.regionSelectionDefaultKey)
 		}
 	}
 
@@ -102,7 +99,7 @@ class PESManager {
 		let currentData = data
 
 		if let currentData = currentData {
-			let today = PESData.dateFormatter.string(from: Date())
+			let today = PESData.dateFormatter.string(from: now)
 			let date = PESData.dateFormatter.string(from: currentData.date)
 			if today == date { completion(.alreadyUpToDate); return }
 		}

@@ -107,7 +107,7 @@ extension ComplicationController {
 		case index
 		case level
 		case pes
-		case outdatedPes
+		case pesOutdated
 	}
 
 	func str(_ pattern: StringPattern) -> String {
@@ -115,7 +115,7 @@ extension ComplicationController {
 			case .index: return NSLocalizedString("Index", comment: "String pattern")
 			case .level: return NSLocalizedString("Level", comment: "String pattern")
 			case .pes: return "PES"
-			case .outdatedPes: return "PES*"
+			case .pesOutdated: return "PES*"
 		}
 	}
 
@@ -141,7 +141,7 @@ extension ComplicationController {
 			allColors = allColors.map { $0.adjusted(by: -0.2) }
 		}
 
-		let pesText = str(today ? .pes : .outdatedPes)
+		let pesText = str(today ? .pes : .pesOutdated)
 
 		switch complication.family {
 

@@ -83,7 +83,7 @@ class MainController: WKInterfaceController {
 			DispatchQueue.main.async {
 				if case .success(let data) = result {
 					self.data = data
-				} else  {
+				} else {
 					self.data = PESManager.shared.data
 				}
 			}
